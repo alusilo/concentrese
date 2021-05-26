@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-md-9">
+		<div class="card">
+			<div class="card-body">
+				<canvas id="concentreseGame" width="800" height="500"></canvas>
+				<script src="{% static 'js/game.js' %}"></script>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="card text-center">
+			<img src="{% static 'img/user.png' %}" class="card-img-top" class="rounded-circle" alt="User">
+			<div class="card-body">
+				<p><strong>Nombre</strong>: {{ data.full_name }}</p>
+				<p><strong>Email</strong>: {{ data.record }}</p>
+				<p><strong>Company</strong>: {{ data.company }}</p>
+				<p><strong>Management</strong>: {{ data.management }}</p>
+				<p><strong>Position</strong>: {{ data.position }}</p>
+				<p><strong>ID</strong>: {{ data.id }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
