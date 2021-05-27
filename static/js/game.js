@@ -12,7 +12,7 @@ let inputScore = document.getElementById("inputScore");
 let inputClicks = document.getElementById("inputClicks");
 let inputTime = document.getElementById("inputTime");
 let imgs;
-let cardsId = []; 
+let cardsId = [];
 let cardsSelected = [];
 let infoSelected;
 let cardsWon = 0;
@@ -46,42 +46,38 @@ document.addEventListener("DOMContentLoaded", function () {
    
    //define functions 
    createBoard(grid, cardArray);
+   
    arrangeCard();
 
    //add a click function for images
 
-   imgs = document.querySelectorAll("img");
+   imgs = document.querySelectorAll("img[data-id]");
 
-   Array.from(imgs).forEach(img => 
+   Array.from(imgs).forEach(img => {
       img.addEventListener("click", flipCard)
-   )
+   });
 
    imgs.forEach((arr, index) => {
-      if ($(arr).attr('data-id')) {
-         arr.setAttribute("src", cardArray[index].img);
-         arr.classList.add("flip");
-      }
+      arr.setAttribute("src", cardArray[index].img);
+      arr.classList.add("flip");
    }, 2000);
 
    setTimeout(function(){
       imgs.forEach((arr, index) => {
-         if ($(arr).attr('data-id')) {
-            arr.setAttribute("src", "/static/img/game/blank.jpg");
-            arr.classList.add("flip");
-         }
+        arr.setAttribute("src", "/static/img/game/blank.jpg");
+        arr.classList.add("flip");
       });
    }, 3000);
 });
 
 //createBoard function
 
-function createBoard(grid, array) { 
-   // popup.style.display = "none"; 
-   array.forEach((arr, index) => { 
-      let img = document.createElement("img"); 
+function createBoard(grid, array) {
+   array.forEach((arr, index) => {
+      let img = document.createElement("img");
       img.setAttribute("src", "/static/img/game/blank.jpg");
-      img.setAttribute("data-id", index); 
-      grid.appendChild(img); 
+      img.setAttribute("data-id", index);
+      grid.appendChild(img);
    })
 }
 
@@ -93,7 +89,7 @@ function arrangeCard() {
 
 // flip Card function
 
-function flipCard() { 
+function flipCard() {
    let selected = this.dataset.id;
    cardsSelected.push(cardArray[selected].name);
    infoSelected = {
@@ -111,26 +107,28 @@ function flipCard() {
 // checkForMatch function
 
 function checkForMatch() { 
-   let imgs = document.querySelectorAll("img"); 
+   let imgs = document.querySelectorAll("img[data-id]");
    let firstCard = cardsId[0];
    let secondCard = cardsId[1];
    if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) {
       infoTitle.innerHTML = infoSelected.title;
       infoDescription.innerHTML = infoSelected.description;
+      imgs[firstCard].removeEventListener("click", flipCard);
+      imgs[secondCard].removeEventListener("click", flipCard);
       $('#staticBackdrop').modal("show");
-      cardsWon += 1; 
+      cardsWon += 1;
       scoreBoard.innerHTML = cardsWon;
       inputScore.value = cardsWon;
-      setTimeout(checkWon,500) 
+      //setTimeout(checkWon, 500) 
    } else { 
       imgs[firstCard].setAttribute("src", "/static/img/game/blank.jpg");
       imgs[secondCard].setAttribute("src", "/static/img/game/blank.jpg");
-      // alert("wrong, please try again");
-      imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip"); 
+      imgs[firstCard].classList.remove("flip");
+      imgs[secondCard].classList.remove("flip"); 
    } 
-   cardsSelected = []; 
-   cardsId = []; 
-   clicks += 1; 
+   cardsSelected = [];
+   cardsId = [];
+   clicks += 1;
    clickBoard.innerHTML = clicks;
    inputClicks.value = clicks;
 }
@@ -138,7 +136,6 @@ function checkForMatch() {
 function checkWon() {
    if (cardsWon == cardArray.length / 2) {
       $('#congrats').modal("show");
-      // setTimeout(()=> popup.style.display = "flex" ,300); 
    }
 }
 
