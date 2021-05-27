@@ -18,3 +18,10 @@ class GameUser(models.Model):
 
 	def __str__(self):
 		return '{} -> {}'.format(self.full_name, self.record)
+
+class GameInfo(models.Model):
+	title = models.CharField(max_length=200)
+	description = models.TextField()
+
+	def __str__(self):
+		return "Configuración"

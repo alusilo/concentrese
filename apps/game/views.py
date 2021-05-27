@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 
 from apps.game.forms import GameUserCreationAndCheckForm
-from apps.game.models import GameUser
+from apps.game.models import GameUser, GameInfo
 
 import datetime
 
@@ -16,6 +16,12 @@ class HomeView(View):
 	template_name = 'index.html'
 
 	def get(self, request, *args, **kwargs):
+		config = GameInfo.objects.first()
+		if config is None:
+			config = {
+				'title': "Titulo",
+				'description': "Descripcion"
+			}
 		form = self.form_class()
 		session_keys = list(request.session.keys())
 		for key in session_keys:
@@ -32,7 +38,7 @@ class HomeView(View):
 			elif key == 'id':
 				del request.session[key]
 		
-		return render(request, self.template_name, {'form': form})
+		return render(request, self.template_name, {'form': form, 'config': config})
 
 	def post(self, request, *args, **kwargs):
 		form = self.form_class(request.POST)
@@ -73,7 +79,7 @@ class HomeView(View):
 			except ObjectDoesNotExist:
 				pass
 
-		return render(request, self.template_name, {'form': form})
+		return render(request, self.template_name, {'form': form, 'config': config})
 
 class GameView(View):
 	template_name = 'game.html'

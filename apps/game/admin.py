@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.game.models import GameUser
+from apps.game.models import GameUser, GameInfo
 
 class GameUserAdmin(admin.ModelAdmin):
 	fields = ('full_name', 'record', 'company', 'management', 'position', 'score', 'clicks', 'time', 'last_played')
@@ -16,5 +16,17 @@ class GameUserAdmin(admin.ModelAdmin):
 	def has_change_permission(self, request, obj=None):
 		return False
 
+class GameInfoAdmin(admin.ModelAdmin):
+	fields = ['title', 'description']
+
+	def has_add_permission(self, request):
+		count = GameInfo.objects.all().count()
+		
+		if count == 0:
+			return True
+
+		return False
+
 # Register your models here.
 admin.site.register(GameUser, GameUserAdmin)
+admin.site.register(GameInfo, GameInfoAdmin)
