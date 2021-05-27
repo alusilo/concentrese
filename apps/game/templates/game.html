@@ -10,13 +10,10 @@
 				<div>
 					<div class="container">
 						<div class="data">
-							<div class="score">Score : <span class="scoreBoard">0</span></div>
-							<div class="click">Click : <span class="clickBoard">0</span></div>
+							<div class="score">Puntaje : <span class="scoreBoard">0</span></div>
+							<div class="click">Clics : <span class="clickBoard">0</span></div>
 						</div>
 						<div class="grid">
-							<div class="popup">
-								<button class="btn btn-primary">Jugar nuevamente</button>
-							</div>
 						</div>
 						<div class="data">
 							<div class="click">Time : <span class="timeBoard">0</span> [seg]</div>
@@ -30,20 +27,69 @@
 		<div class="card text-center">
 			<img class="profile" src="{% static 'img/user.png' %}" class="card-img-top" class="rounded-circle" alt="User">
 			<div class="card-body">
-				<form action="{% url 'game' %}" method="post">
-					<p><strong>Nombre</strong>: {{ data.full_name }}</p>
-					<p><strong>Email</strong>: {{ data.record }}</p>
-					<p><strong>Company</strong>: {{ data.company }}</p>
-					<p><strong>Management</strong>: {{ data.management }}</p>
-					<p><strong>Position</strong>: {{ data.position }}</p>
-					<input type="hidden" id="inputScore" name="score" value="0">
-					<input type="hidden" id="inputClicks" name="clicks" value="0">
-					<input type="hidden" id="inputTime" name="time" value="0">
-					<input type="hidden" name="id" value="{{ data.id }}">
-					{% csrf_token %}
-					<button type="submit" class="playAgain btn btn-primary">Subir resultado</button>
-				</form>
+				<p><strong>Nombre</strong>: {{ data.full_name }}</p>
+				<p><strong>Email</strong>: {{ data.record }}</p>
+				<p><strong>Company</strong>: {{ data.company }}</p>
+				<p><strong>Management</strong>: {{ data.management }}</p>
+				<p><strong>Position</strong>: {{ data.position }}</p>
 			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block dialog %}
+
+<!-- Information dialog -->
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="info-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="info-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="info-description" class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Congratulation dialog -->
+
+<div class="modal fade" id="congrats" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="congratsLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="congratsLabel">Felicitaciones, lo lograste!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form action="{% url 'game' %}" method="post">
+			<div class="modal-body text-left">
+				<div class="form-group">
+					<label for="score">Puntaje: </label><input type="text" id="inputScore" name="score" value="0" readonly>
+				</div>
+				<div class="form-group">
+					<label for="clicks">Clicks realizados: </label><input type="text" id="inputClicks" name="clicks" value="0" readonly>
+				<div class="form-group">
+					<label for="time">Tiempo: </label><input type="text" id="inputTime" name="time" value="0" readonly>
+				</div>
+				<input type="hidden" name="id" value="{{ data.id }}">
+				{% csrf_token %}
+      		</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+				<button type="submit" class="btn btn-danger">Subir resultado</button>
+			</div>
+			</form>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,242 @@
+[
+	{
+		"title": "SGA - Marca de exclamación",
+		"description": "Irritante (piel y ojos), sensibilizador de piel, toxicidad aguda, efectos narcóticos e irritantes del tracto respiratorio",
+		"name": 1,
+		"img": "/static/img/game/1.jpg"
+	},
+	{
+		"title": "SGA - Cilindro de gas",
+		"description": "Gases presurizados",
+		"name": 2,
+		"img": "/static/img/game/2.jpg"
+	},
+	{
+		"title": "SGA - Flama",
+		"description": "Inflamables, auto reactivos, sustancias que experimentan calentamiento espontaneo, emisores de flamas, peróxidos orgánicos, pirofóricos",
+		"name": 3,
+		"img": "/static/img/game/3.jpg"
+	},
+	{
+		"title": "SGA - Flama sobre circulo",
+		"description": "Compuestos oxidantes",
+		"name": 4,
+		"img": "/static/img/game/4.jpg"
+	},
+	{
+		"title": "SGA - Corrosión",
+		"description": "Corrosión en piel, daño a ojos, corrosivo para el metal",
+		"name": 5,
+		"img": "/static/img/game/5.jpg"
+	},
+	{
+		"title": "SGA - Calavera y huesos cruzados",
+		"description": "Toxico, toxicidad aguda",
+		"name": 6,
+		"img": "/static/img/game/6.jpg"
+	},
+	{
+		"title": "SGA - Bomba explotando",
+		"description": "Explosivos, auto reactivos, peróxidos orgánicos",
+		"name": 7,
+		"img": "/static/img/game/7.jpg"
+	},
+	{
+		"title": "SGA - Peligro a la Salud",
+		"description": "Cancero génico, toxicidad reproductiva, sensibilizador de las vías respiratorias, toxico para órgano diana, toxico por aspiración, mutagénico",
+		"name": 8,
+		"img": "/static/img/game/8.jpg"
+	},
+	{
+		"title": "SGA - Peligro al medio ambiente",
+		"description": "Toxico para organismos acuáticos",
+		"name": 9,
+		"img": "/static/img/game/9.jpg"
+	},
+	{
+		"title": "UN – División 1.1: Explosivo",
+		"description": "Sustancias y objetos explosivos",
+		"name": 10,
+		"img": "/static/img/game/10.jpg"
+	},
+	{
+		"title": "UN – División 2.1: Gas Inflamable",
+		"description": "",
+		"name": 11,
+		"img": "/static/img/game/11.jpg"
+	},
+	{
+		"title": "UN – División 2.2: Gas no Inflamable, no toxico",
+		"description": "",
+		"name": 12,
+		"img": "/static/img/game/12.jpg"
+	},
+	{
+		"title": "UN – Clase 3: Líquidos inflamables",
+		"description": "",
+		"name": 13,
+		"img": "/static/img/game/13.jpg"
+	},
+	{
+		"title": "UN – División 4.3: Materiales que, al contacto con el agua, desprende gases inflamables",
+		"description": "",
+		"name": 14,
+		"img": "/static/img/game/14.jpg"
+	},
+	{
+		"title": "UN – División 5.1: Sustancia comburente",
+		"description": "",
+		"name": 15,
+		"img": "/static/img/game/15.jpg"
+	},
+	{
+		"title": "UN – División 6.1: Materia toxica",
+		"description": "",
+		"name": 16,
+		"img": "/static/img/game/16.jpg"
+	},
+	{
+		"title": "UN – División 6.2: Materia infecciosas",
+		"description": "",
+		"name": 17,
+		"img": "/static/img/game/17.jpg"
+	},
+	{
+		"title": "UN – Clase 8:  Sustancias corrosivas",
+		"description": "",
+		"name": 18,
+		"img": "/static/img/game/18.jpg"
+	},
+	{
+		"title": "UN – Clase 9:  Materia y objetos diversos que pueden suponer un riesgo distinto de los que se señalan en las otras clases",
+		"description": "",
+		"name": 19,
+		"img": "/static/img/game/19.jpg"
+	},
+	{
+		"title": "NFPA – Rombo de clasificación de peligros según la NFPA 704",
+		"description": "",
+		"name": 20,
+		"img": "/static/img/game/20.jpg"
+	},
+	{
+		"title": "SGA - Marca de exclamación",
+		"description": "Irritante (piel y ojos), sensibilizador de piel, toxicidad aguda, efectos narcóticos e irritantes del tracto respiratorio",
+		"name": 1,
+		"img": "/static/img/game/1.jpg"
+	},
+	{
+		"title": "SGA - Cilindro de gas",
+		"description": "Gases presurizados",
+		"name": 2,
+		"img": "/static/img/game/2.jpg"
+	},
+	{
+		"title": "SGA - Flama",
+		"description": "Inflamables, auto reactivos, sustancias que experimentan calentamiento espontaneo, emisores de flamas, peróxidos orgánicos, pirofóricos",
+		"name": 3,
+		"img": "/static/img/game/3.jpg"
+	},
+	{
+		"title": "SGA - Flama sobre circulo",
+		"description": "Compuestos oxidantes",
+		"name": 4,
+		"img": "/static/img/game/4.jpg"
+	},
+	{
+		"title": "SGA - Corrosión",
+		"description": "Corrosión en piel, daño a ojos, corrosivo para el metal",
+		"name": 5,
+		"img": "/static/img/game/5.jpg"
+	},
+	{
+		"title": "SGA - Calavera y huesos cruzados",
+		"description": "Toxico, toxicidad aguda",
+		"name": 6,
+		"img": "/static/img/game/6.jpg"
+	},
+	{
+		"title": "SGA - Bomba explotando",
+		"description": "Explosivos, auto reactivos, peróxidos orgánicos",
+		"name": 7,
+		"img": "/static/img/game/7.jpg"
+	},
+	{
+		"title": "SGA - Peligro a la Salud",
+		"description": "Cancero génico, toxicidad reproductiva, sensibilizador de las vías respiratorias, toxico para órgano diana, toxico por aspiración, mutagénico",
+		"name": 8,
+		"img": "/static/img/game/8.jpg"
+	},
+	{
+		"title": "SGA - Peligro al medio ambiente",
+		"description": "Toxico para organismos acuáticos",
+		"name": 9,
+		"img": "/static/img/game/9.jpg"
+	},
+	{
+		"title": "UN – División 1.1: Explosivo",
+		"description": "Sustancias y objetos explosivos",
+		"name": 10,
+		"img": "/static/img/game/10.jpg"
+	},
+	{
+		"title": "UN – División 2.1: Gas Inflamable",
+		"description": "",
+		"name": 11,
+		"img": "/static/img/game/11.jpg"
+	},
+	{
+		"title": "UN – División 2.2: Gas no Inflamable, no toxico",
+		"description": "",
+		"name": 12,
+		"img": "/static/img/game/12.jpg"
+	},
+	{
+		"title": "UN – Clase 3: Líquidos inflamables",
+		"description": "",
+		"name": 13,
+		"img": "/static/img/game/13.jpg"
+	},
+	{
+		"title": "UN – División 4.3: Materiales que, al contacto con el agua, desprende gases inflamables",
+		"description": "",
+		"name": 14,
+		"img": "/static/img/game/14.jpg"
+	},
+	{
+		"title": "UN – División 5.1: Sustancia comburente",
+		"description": "",
+		"name": 15,
+		"img": "/static/img/game/15.jpg"
+	},
+	{
+		"title": "UN – División 6.1: Materia toxica",
+		"description": "",
+		"name": 16,
+		"img": "/static/img/game/16.jpg"
+	},
+	{
+		"title": "UN – División 6.2: Materia infecciosas",
+		"description": "",
+		"name": 17,
+		"img": "/static/img/game/17.jpg"
+	},
+	{
+		"title": "UN – Clase 8:  Sustancias corrosivas",
+		"description": "",
+		"name": 18,
+		"img": "/static/img/game/18.jpg"
+	},
+	{
+		"title": "UN – Clase 9:  Materia y objetos diversos que pueden suponer un riesgo distinto de los que se señalan en las otras clases",
+		"description": "",
+		"name": 19,
+		"img": "/static/img/game/19.jpg"
+	},
+	{
+		"title": "NFPA – Rombo de clasificación de peligros según la NFPA 704",
+		"description": "",
+		"name": 20,
+		"img": "/static/img/game/20.jpg"
+	}
+]

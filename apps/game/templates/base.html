@@ -21,10 +21,24 @@
 </head>
 
 <body class="text-center">
-	<div class="inner-container">
-		{% block content %}{% endblock %}
+	<div class="fluid-container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="inner-container">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+		<div class="row logo-container">
+			<div class="col-md-6">
+				<img class="ecopetrol" src="{% static 'img/logo_ecopetrol.png' %}">
+			</div>
+			<div class="col-md-6">
+				<img class="championx" src="{% static 'img/logo_championx.png' %}">
+			</div>
+		</div>
 	</div>
-
+	{% block dialog %}{% endblock %}
 	<!-- Bootstrap core JavaScript -->
 	<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 	<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
