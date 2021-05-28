@@ -41,6 +41,12 @@ class HomeView(View):
 		return render(request, self.template_name, {'form': form, 'config': config})
 
 	def post(self, request, *args, **kwargs):
+		config = GameInfo.objects.first()
+		if config is None:
+			config = {
+				'title': "Titulo",
+				'description': "Descripcion"
+			}
 		form = self.form_class(request.POST)
 		if form.is_valid():
 			full_name = form.cleaned_data['full_name']
