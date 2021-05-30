@@ -20,24 +20,21 @@
 	{% block style %}{% endblock %}
 </head>
 
-<body class="text-center">
-	<div class="fluid-container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="inner-container">
-					{% block content %}{% endblock %}
+<body>
+	<div class="container">
+		<section class="introduction">
+			{% block content %}{% endblock %}
+			<div class="row logo-container">
+				<div class="col-md-6">
+					<img class="ecopetrol" src="{% static 'img/logo_ecopetrol.png' %}">
+				</div>
+				<div class="col-md-6">
+					<img class="championx" src="{% static 'img/logo_championx.png' %}">
 				</div>
 			</div>
-		</div>
-		<div class="row logo-container">
-			<div class="col-md-6">
-				<img class="ecopetrol" src="{% static 'img/logo_ecopetrol.png' %}">
-			</div>
-			<div class="col-md-6">
-				<img class="championx" src="{% static 'img/logo_championx.png' %}">
-			</div>
-		</div>
+		</section>
 	</div>
+
 	{% block dialog %}{% endblock %}
 	<!-- Bootstrap core JavaScript -->
 	<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

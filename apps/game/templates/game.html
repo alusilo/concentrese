@@ -5,28 +5,26 @@
 
 <div class="row">
 	<div class="col-md-9">
-		<div class="card">
+		<div class="card info">
 			<div class="card-body">
-				<div>
-					<div class="container">
-						<div class="data">
-							<div class="score">Puntaje : <span class="scoreBoard">0</span></div>
-							<div class="click">Clics : <span class="clickBoard">0</span></div>
-						</div>
-						<div class="grid">
-						</div>
-						<div class="data">
-							<div class="click">Time : <span class="timeBoard">0</span> [seg]</div>
-						</div>
-					</div>
+				<div class="data">
+					<div class="score">Puntaje : <span class="scoreBoard">0</span></div>
+					<div class="click">Clics : <span class="clickBoard">0</span></div>
 				</div>
+				<div class="grid text-center">
+				</div>
+			</div>
+			<div class="data">
+				<div class="click">Time : <span class="timeBoard">0</span> [seg]</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Sidebar Widgets Column -->
 	<div class="col-md-3">
-		<div class="card text-center">
+		<div class="card">
 			<img class="profile" src="{% static 'img/user.png' %}" class="card-img-top" class="rounded-circle" alt="User">
-			<div class="card-body">
+			<div class="card-body text-center">
 				<p><strong>Nombre</strong>: {{ data.full_name }}</p>
 				<p><strong>Email</strong>: {{ data.record }}</p>
 				<p><strong>Company</strong>: {{ data.company }}</p>
